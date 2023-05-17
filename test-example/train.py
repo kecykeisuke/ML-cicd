@@ -46,7 +46,7 @@ def parse_args():
 
 def download_data():
     "Grab dataset from artifact"
-    processed_data_at = wandb.use_artifact(f'{params.PROCESSED_DATA_AT}:latest')
+    processed_data_at = wandb.use_artifact(f'{params.PROCESSED_DATA_AT}')
     processed_dataset_dir = Path(processed_data_at.download())
     return processed_dataset_dir
 
